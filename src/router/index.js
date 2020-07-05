@@ -12,8 +12,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld', 
-      component: HelloWorld
+      // name: 'HelloWorld', 
+      // component: HelloWorld
+      name: 'docStructure',
+      component: docStructure
     }, {
       path: '/first',
       name: 'First',

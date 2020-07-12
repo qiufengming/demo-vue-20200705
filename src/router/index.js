@@ -14,8 +14,8 @@ export default new Router({
       path: '/',
       // name: 'HelloWorld', 
       // component: HelloWorld
-      name: 'docStructure',
-      component: docStructure
+      name: 'Ueditor',
+      component: Ueditor
     }, {
       path: '/first',
       name: 'First',

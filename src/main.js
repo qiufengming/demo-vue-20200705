@@ -8,6 +8,9 @@ import 'element-ui/lib/theme-chalk/index.css'
 import './style/common.css'
 // 引入vuex-store
 import store from './store/index';
+// globalVariable.js 这样就可以在项目内任何地方都可以使用了。
+import globalVariable from './script/globalVariable'
+Vue.prototype.commonsVariable = globalVariable;
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false
@@ -20,3 +23,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+

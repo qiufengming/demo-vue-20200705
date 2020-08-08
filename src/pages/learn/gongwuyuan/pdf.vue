@@ -12,7 +12,7 @@
 
 <script>
     import yanyuPdf01 from './fangfajingjiang/yanyu/pdf01.vue';
-    import yanyuPdf02 from './fangfajingjiang/yanyu/pdf02.vue';
+    import yanyuPdf02 from './fangfajingjiang/panduan/pdf02.vue';
     export default {
         components: { yanyuPdf01, yanyuPdf02 },
         data(){

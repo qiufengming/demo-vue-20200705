@@ -3,7 +3,7 @@
         <el-container>
             <el-header class="header">Header</el-header>
             <el-main class="main">
-                <yanyuPdf03 />
+                <yanyuPdf04 />
             </el-main>
             <el-footer class="footer">Footer</el-footer>
         </el-container>
@@ -14,8 +14,9 @@
     import yanyuPdf01 from './fangfajingjiang/yanyu/pdf01.vue';
     import yanyuPdf02 from './fangfajingjiang/panduan/pdf02.vue';
     import yanyuPdf03 from './fangfajingjiang/ziliaofenxi/pdf03.vue';
+    import yanyuPdf04 from './fangfajingjiang/shenlun/pdf04.vue';
     export default {
-        components: { yanyuPdf01, yanyuPdf02, yanyuPdf03 },
+        components: { yanyuPdf01, yanyuPdf02, yanyuPdf03, yanyuPdf04 },
         data(){
             return {
                 mymsg: '这是第二个页面哦~',

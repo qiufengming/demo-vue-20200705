@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import index from '@/pages/home/index'
 import HelloWorld from '@/components/HelloWorld'
 import First from '@/components/views/First'
 import Second from '@/components/views/Second'
@@ -13,13 +14,13 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   // name: 'HelloWorld', 
-    //   // component: HelloWorld
-    //   name: 'Ueditor',
-    //   component: Ueditor
-    // }, 
+    {
+      path: '/',
+      // name: 'HelloWorld', 
+      // component: HelloWorld
+      name: 'index',
+      component: index
+    }, 
     {
       path: '/first',
       name: 'First',

@@ -11,8 +11,8 @@
                 <p>提问—文段—选项</p>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  中心理解题 </h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s1')">第一节  中心理解题 </h3>
+                <div class="section-c" v-show="sectionOpen.c1s1">
                     <dl class="outline">
                         <dt>【提问方式】</dt>
                         <dd>这段文字主要 / 旨在 / 重在 / 意在 / 想要说明（论述、强调）的是……</dd>
@@ -204,8 +204,8 @@
                 </div>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节  细节判断题</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s2')">第二节  细节判断题</h3>
+                <div class="section-c" v-show="sectionOpen.c1s2"> 
                     <dl class="outline">
                         <dt>【提问方式】</dt>
                         <dd>以下对文段理解正确 / 不正确的是……</dd>
@@ -252,20 +252,21 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>细节判断题</span>
+                        </div>
+                        <el-tree :data="summary.d8" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>细节判断题</span>
-                    </div>
-                    <el-tree :data="summary.d8" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
+                
             </div>
         </div>
         <div class="chapter-wrap">
             <h2 class="text-c chapter-t"><span>第二章 | 语言表达</span></h2>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  语句排序题 </h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s1')">第一节  语句排序题 </h3>
+                <div class="section-c" v-show="sectionOpen.c2s1">
                     <dl class="outline">
                         <dt>【提问方式】</dt>
                         <dd>将以上 / 以下几个句子重新排列，语序正确的是……</dd>
@@ -316,17 +317,18 @@
                     <div class="modal-wrap">
                         <h4 class="modal-t">四、确定尾句（因此、所以、看来、于是、这、应该、需要）</h4>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>语句排序题</span>
+                        </div>
+                        <el-tree :data="summary.d9" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>语句排序题</span>
-                    </div>
-                    <el-tree :data="summary.d9" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
+                
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节  语句填空题</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s2')">第二节  语句填空题</h3>
+                <div class="section-c" v-show="sectionOpen.c2s2">
                     <dl class="outline">
                         <dt>【提问方式】</dt>
                         <dd>填入画横线部分最恰当的一句 / 项是……</dd>
@@ -351,17 +353,17 @@
                         <p>1. 注意与上下文的联系</p>
                         <p>2. 把握好主题词，保证与文段话题一致</p>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>语句填空题</span>
+                        </div>
+                        <el-tree :data="summary.d10" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>语句填空题</span>
-                    </div>
-                    <el-tree :data="summary.d10" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第三节  接语选择题</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s3')">第三节  接语选择题</h3>
+                <div class="section-c" v-show="sectionOpen.c2s3">
                     <dl class="outline">
                         <dt>【提问方式】</dt>
                         <dd>作者接下来最有可能讲述的是……</dd>
@@ -371,21 +373,21 @@
                         <p></p>
                         <p>干扰项特征：文段中已经论述过的内容</p>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>接语选择题</span>
+                        </div>
+                        <el-tree :data="summary.d11" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>接语选择题</span>
-                    </div>
-                    <el-tree :data="summary.d11" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
         </div>
 
         <div class="chapter-wrap">
             <h2 class="text-c chapter-t"><span>第三章 | 逻辑填空</span></h2>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  词的辨析</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c3s1')">第一节  词的辨析</h3>
+                <div class="section-c" v-show="sectionOpen.c3s1">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、词义侧重</h4>
                         <div class="modal-c">
@@ -428,17 +430,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>词的辨析</span>
+                        </div>
+                        <el-tree :data="summary.d12" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>词的辨析</span>
-                    </div>
-                    <el-tree :data="summary.d12" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节  语境分析</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c3s2')">第二节  语境分析</h3>
+                <div class="section-c" v-show="sectionOpen.c3s2">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、关联关系</h4>
                         <div class="modal-c">
@@ -484,13 +486,13 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>语境分析</span>
+                        </div>
+                        <el-tree :data="summary.d13" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>语境分析</span>
-                    </div>
-                    <el-tree :data="summary.d13" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
         </div>
     </div>
@@ -521,6 +523,7 @@
                     children: 'children',
                     label: 'label'
                 },
+                sectionOpen:{},
             };
         },
         created(){
@@ -528,6 +531,10 @@
         },
         mounted(){},
         methods: {
+            sectionOpenClose(sectionNum){
+                let self = this;
+                self.$set(self.sectionOpen, sectionNum, !self.sectionOpen[sectionNum]);
+            },
             // 初始化数据
             initData(){
                 let self = this;

@@ -7,8 +7,8 @@
         <div class="chapter-wrap">
             <h2 class="text-c chapter-t"><span>第一章 | 图形推理</span></h2>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  位置规律</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s1')">第一节  位置规律</h3>
+                <div class="section-c" v-show="sectionOpen.c1s1">
                     <div class="border-radius">
                         <p>题目特征：元素组成相同</p>
                     </div>
@@ -36,17 +36,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>位置规律</span>
+                        </div>
+                        <el-tree :data="summary.d1" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>位置规律</span>
-                    </div>
-                    <el-tree :data="summary.d1" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节  样式规律</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s2')">第二节  样式规律</h3>
+                <div class="section-c" v-show="sectionOpen.c1s2">
                     <div class="border-radius">
                         <p>题目特征：元素组成相似</p>
                     </div>
@@ -70,17 +70,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>样式规律</span>
+                        </div>
+                        <el-tree :data="summary.d2" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>样式规律</span>
-                    </div>
-                    <el-tree :data="summary.d2" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第三节  属性规律</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s3')">第三节  属性规律</h3>
+                <div class="section-c" v-show="sectionOpen.c1s3">
                     <div class="border-radius">
                         <p>题目特征：元素组成不相同、不相似</p>
                     </div>
@@ -110,17 +110,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>属性规律</span>
+                        </div>
+                        <el-tree :data="summary.d3" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>属性规律</span>
-                    </div>
-                    <el-tree :data="summary.d3" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第四节  特殊规律</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s4')">第四节  特殊规律</h3>
+                <div class="section-c" v-show="sectionOpen.c1s4">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、图形间关系</h4>
                         <div class="modal-c">
@@ -143,17 +143,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>特殊规律</span>
+                        </div>
+                        <el-tree :data="summary.d4" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>特殊规律</span>
-                    </div>
-                    <el-tree :data="summary.d4" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第五节  数量规律</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s5')">第五节  数量规律</h3>
+                <div class="section-c" v-show="sectionOpen.c1s5">
                     <div class="border-radius">
                         <p>题目特征：元素组成不相同、不相似且无属性规律</p>
                     </div>
@@ -208,17 +208,17 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>数量规律</span>
+                        </div>
+                        <el-tree :data="summary.d5" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>数量规律</span>
-                    </div>
-                    <el-tree :data="summary.d5" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第六节  空间重构</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c1s6')">第六节  空间重构</h3>
+                <div class="section-c" v-show="sectionOpen.c1s6">
                     <div class="border-radius">
                         <p>解题思维：</p>
                         <p>1. 注意折向——平面图为纸盒的外表面</p>
@@ -247,13 +247,13 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>空间类 - 六面体</span>
+                        </div>
+                        <el-tree :data="summary.d6" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>空间类 - 六面体</span>
-                    </div>
-                    <el-tree :data="summary.d6" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
         </div>
 
@@ -270,8 +270,8 @@
             </div>
 
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  语义关系</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s1')">第一节  语义关系</h3>
+                <div class="section-c" v-show="sectionOpen.c2s1">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、近义关系、反义关系</h4>
                         <div class="modal-c">
@@ -296,8 +296,8 @@
                 </div>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节   逻辑关系</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s2')">第二节   逻辑关系</h3>
+                <div class="section-c" v-show="sectionOpen.c2s2">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、全同关系</h4>
                         <div class="modal-c">
@@ -357,8 +357,8 @@
                 </div>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第三节  语法关系</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s3')">第三节  语法关系</h3>
+                <div class="section-c" v-show="sectionOpen.c2s3">
                     <h4>技巧：造句子</h4>
                     <div class="border-radius">
                         <p>1. 主谓关系</p>
@@ -373,8 +373,8 @@
                 </div>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第四节  词语拆分</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c2s4')">第四节  词语拆分</h3>
+                <div class="section-c" v-show="sectionOpen.c2s4">
                     <h4>技巧：造句子</h4>
                     <div class="border-radius">
                         <p>拆分思维：</p>
@@ -397,71 +397,74 @@
         </div>
 
         <div class="chapter-wrap">
-            <h2 class="text-c chapter-t"><span>第三章 | 定义判断</span></h2>
-            <div class="border-radius">
-                <p>解题思维：</p>
-                <p>1. 看清提问方式，为“属于 / 符合”“不属于 / 不符合”定义等/p>
-                <p>2. 识别有效信息——找准关键词、关键句</p>
-                <p>3. 逐一分析选项，当纠结时采用对比的思维进行排除，最终选择更符合题干要求的选项</p>
-            </div>
-            <div class="modal-wrap">
-                <h4 class="modal-t">一、快速识别有效信息</h4>
-                <div class="modal-c">
-                    <div class="border-radius">
-                        <p>方法一：关键词——主体、客体</p>
-                        <p></p>
-                        <p>主体、客体错误的选项一定不符合定义</p>
-                    </div>
-                    <div class="border-radius">
-                        <p>方法二：句式</p>
-                        <p></p>
-                        <p>常见关键词：</p>
-                        <p>通过、利用</p>
-                        <p>以、达到</p>
-                        <p>因为、由于</p>
-                        <p>导致、从而</p>
-                        <p>当……时、在……过程中、在……前 / 后</p>
-                    </div>
-                    <div class="border-radius">
-                        <p>方法三：句号与补充说明</p>
-                        <p></p>
-                        <p>1. 优先看定义所在的句子</p>
-                        <p>2. 当定义所在句子不好理解时，可重点关注后面的补充说明部分</p>
-                        <p></p>
-                        <p>常见补充说明关键词：即、包括、也就是说、换言之……</p>
-                    </div>
-                    <div class="border-radius">
-                        <p>多定义：</p>
-                        <p></p>
-                        <p>1. 问哪个定义优先看哪个定义</p>
-                        <p>2. 在两个选项中纠结时，再与其他定义做对比</p>
+            <h2 class="text-c chapter-t" @click="sectionOpenClose('c3')"><span>第三章 | 定义判断</span></h2>
+            <div class="chapter-c" v-show="sectionOpen.c3">
+                <div class="border-radius">
+                    <p>解题思维：</p>
+                    <p>1. 看清提问方式，为“属于 / 符合”“不属于 / 不符合”定义等/p>
+                    <p>2. 识别有效信息——找准关键词、关键句</p>
+                    <p>3. 逐一分析选项，当纠结时采用对比的思维进行排除，最终选择更符合题干要求的选项</p>
+                </div>
+                <div class="modal-wrap">
+                    <h4 class="modal-t">一、快速识别有效信息</h4>
+                    <div class="modal-c">
+                        <div class="border-radius">
+                            <p>方法一：关键词——主体、客体</p>
+                            <p></p>
+                            <p>主体、客体错误的选项一定不符合定义</p>
+                        </div>
+                        <div class="border-radius">
+                            <p>方法二：句式</p>
+                            <p></p>
+                            <p>常见关键词：</p>
+                            <p>通过、利用</p>
+                            <p>以、达到</p>
+                            <p>因为、由于</p>
+                            <p>导致、从而</p>
+                            <p>当……时、在……过程中、在……前 / 后</p>
+                        </div>
+                        <div class="border-radius">
+                            <p>方法三：句号与补充说明</p>
+                            <p></p>
+                            <p>1. 优先看定义所在的句子</p>
+                            <p>2. 当定义所在句子不好理解时，可重点关注后面的补充说明部分</p>
+                            <p></p>
+                            <p>常见补充说明关键词：即、包括、也就是说、换言之……</p>
+                        </div>
+                        <div class="border-radius">
+                            <p>多定义：</p>
+                            <p></p>
+                            <p>1. 问哪个定义优先看哪个定义</p>
+                            <p>2. 在两个选项中纠结时，再与其他定义做对比</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-wrap">
-                <h4 class="modal-t">二、小技巧——拆词 / 同构选项排除法</h4>
-                <div class="modal-c">
-                    <div class="border-radius">
-                        <p>1. 拆词</p>
-                        <p>2. 同构选项特征：</p>
-                        <p>（1）意思相近</p>
-                        <p>（2）结构相似</p>
+                <div class="modal-wrap">
+                    <h4 class="modal-t">二、小技巧——拆词 / 同构选项排除法</h4>
+                    <div class="modal-c">
+                        <div class="border-radius">
+                            <p>1. 拆词</p>
+                            <p>2. 同构选项特征：</p>
+                            <p>（1）意思相近</p>
+                            <p>（2）结构相似</p>
+                        </div>
                     </div>
                 </div>
+                <el-card class="summary">
+                    <div slot="header" class="clearfix">
+                        <span>定义判断</span>
+                    </div>
+                    <el-tree :data="summary.d8" :props="defaultProps" default-expand-all></el-tree>
+                </el-card>
             </div>
-            <el-card class="summary">
-                <div slot="header" class="clearfix">
-                    <span>定义判断</span>
-                </div>
-                <el-tree :data="summary.d8" :props="defaultProps" default-expand-all></el-tree>
-            </el-card>
+            
         </div>
 
         <div class="chapter-wrap">
             <h2 class="text-c chapter-t"><span>第四章 | 逻辑判断</span></h2>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第一节  翻译推理</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c4s1')">第一节  翻译推理</h3>
+                <div class="section-c" v-show="sectionOpen.c4s1">
                     <div class="border-radius">
                         <p>题型特征：</p>
                         <p>1. 题干和选项中出现比较明显的逻辑关联词</p>
@@ -556,17 +559,17 @@
                         </div>
                     </div>
 
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>翻译推理</span>
+                        </div>
+                        <el-tree :data="summary.d9" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>翻译推理</span>
-                    </div>
-                    <el-tree :data="summary.d9" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
             <div class="section-wrap">
-                <h3 class="text-c section-t">第二节  组合排列</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c4s2')">第二节  组合排列</h3>
+                <div class="section-c" v-show="sectionOpen.c4s2">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、排除法、代入法</h4>
                         <div class="modal-c">
@@ -596,18 +599,18 @@
                             </div>
                         </div>
                     </div>
+                    <el-card class="summary">
+                        <div slot="header" class="clearfix">
+                            <span>组合排列</span>
+                        </div>
+                        <el-tree :data="summary.d10" :props="defaultProps" default-expand-all></el-tree>
+                    </el-card>
                 </div>
-                <el-card class="summary">
-                    <div slot="header" class="clearfix">
-                        <span>组合排列</span>
-                    </div>
-                    <el-tree :data="summary.d10" :props="defaultProps" default-expand-all></el-tree>
-                </el-card>
             </div>
 
             <div class="section-wrap">
-                <h3 class="text-c section-t">第三节  逻辑论证</h3>
-                <div class="section-c">
+                <h3 class="text-c section-t" @click="sectionOpenClose('c4s3')">第三节  逻辑论证</h3>
+                <div class="section-c" v-show="sectionOpen.c4s3">
                     <div class="modal-wrap">
                         <h4 class="modal-t">一、削弱之否定论点</h4>
                         <div class="modal-c">
@@ -724,6 +727,7 @@
                     children: 'children',
                     label: 'label'
                 },
+                sectionOpen:{},
             };
         },
         created(){
@@ -731,6 +735,10 @@
         },
         mounted(){},
         methods: {
+            sectionOpenClose(sectionNum){
+                let self = this;
+                self.$set(self.sectionOpen, sectionNum, !self.sectionOpen[sectionNum]);
+            },
             // 初始化数据
             initData(){
                 let self = this;

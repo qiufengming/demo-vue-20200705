@@ -3,7 +3,11 @@
         <el-container>
             <el-header class="header">Header</el-header>
             <el-main class="main">
-                <yanyuPdf05 />
+                <fFJJYanyu v-if="pdfId == 'yanyu'" />
+                <fFJJPanduan v-if="pdfId == 'panduan'" />
+                <fFJJZiliaofenxi v-if="pdfId == 'ziliaofenxi'" />
+                <fFJJShenlun v-if="pdfId == 'shenlun'" />
+                <fFJJShenliangguanxi v-if="pdfId == 'shuliangguanxi'" />
             </el-main>
             <el-footer class="footer">Footer</el-footer>
         </el-container>
@@ -11,21 +15,24 @@
 </template>
 
 <script>
-    import yanyuPdf01 from './fangfajingjiang/yanyu/pdf01.vue';
-    import yanyuPdf02 from './fangfajingjiang/panduan/pdf02.vue';
-    import yanyuPdf03 from './fangfajingjiang/ziliaofenxi/pdf03.vue';
-    import yanyuPdf04 from './fangfajingjiang/shenlun/pdf04.vue';
-    import yanyuPdf05 from './fangfajingjiang/shuliangguanxi/pdf05.vue';
+    import fFJJYanyu from './fangfajingjiang/yanyu/pdf01.vue';
+    import fFJJPanduan from './fangfajingjiang/panduan/pdf02.vue';
+    import fFJJZiliaofenxi from './fangfajingjiang/ziliaofenxi/pdf03.vue';
+    import fFJJShenlun from './fangfajingjiang/shenlun/pdf04.vue';
+    import fFJJShenliangguanxi from './fangfajingjiang/shuliangguanxi/pdf05.vue';
     export default {
-        components: { yanyuPdf01, yanyuPdf02, yanyuPdf03, yanyuPdf04, yanyuPdf05 },
+        components: { fFJJYanyu, fFJJPanduan, fFJJZiliaofenxi, fFJJShenlun, fFJJShenliangguanxi },
         data(){
             return {
                 mymsg: '这是第二个页面哦~',
                 data: [],
+                pdfId: '',
             };
         },
         created(){
+            let self = this;
             this.initData();
+            self.pdfId = self.$route.query.id;
         },
         mounted(){},
         methods: {

@@ -64,6 +64,8 @@
                 let self = this;
                 self.data1 = [
                     {name: 'Ueditor 富文本编辑器', routeName: 'Ueditor', routePath: '/ueditor'},
+                    {name: 'Git', routeName: 'git', routePath: '/it/git'},
+                    {name: 'React', routeName: 'react', routePath: '/it/react'},
                 ];
             },
             // 获取data2 数据

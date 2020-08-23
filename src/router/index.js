@@ -9,6 +9,9 @@ import docStructure from '@/pages/works/docStructure/index'
 import learn from '@/pages/learn/index'
 import gongwuyuan from '@/pages/learn/gongwuyuan/index'
 import pdf from '@/pages/learn/gongwuyuan/pdf'
+import it from '@/pages/it/index'
+import git from '@/pages/it/git/index'
+import react from '@/pages/it/react/index'
 
 Vue.use(Router)
 
@@ -38,11 +41,11 @@ export default new Router({
       name: 'docStructure',
       component: docStructure
     }, 
-    {
-      path: '/learn/gongwuyuan',
-      name: 'gongwuyuan',
-      component: gongwuyuan
-    },
+    // {
+    //   path: '/learn/gongwuyuan',
+    //   name: 'gongwuyuan',
+    //   component: gongwuyuan
+    // },
     {
       path: '/learn',
       component: learn,
@@ -56,6 +59,22 @@ export default new Router({
           path: 'gongwuyuan/pdf',
           name: 'pdf',
           component: pdf
+        },
+      ],
+    },
+    {
+      path: '/it',
+      component: it,
+      children: [
+        {
+          path: 'git',
+          name: 'git',
+          component: git
+        },
+        {
+          path: 'react',
+          name: 'react',
+          component: react
         },
       ],
     },

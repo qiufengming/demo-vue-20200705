@@ -1,0 +1,168 @@
+<template>
+    <div class="git_wrap">
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>github上传本地项目代码</span>
+            </div>
+            <ol>
+                <li>
+                    <p>进入github首页，点击新项目<el-button type="primary" size="mini">New repository</el-button></p>
+                    <p>Reposition name 处输入项目名称</p>
+                    <p>Description 处输入项目描述</p>
+                    <p>Public 和 Private 选中 Public</p>
+                    <p>勾选 Initialize this repository with a README</p>
+                    <p>点击 <el-button type="primary" size="mini">Create repository</el-button>创建按钮</p>
+                </li>
+                <li>
+                    <p>点击 <el-button type="primary" size="mini">Clone or download</el-button>按钮</p>
+                    <p>复制里面的地址备用（记为 cloneUrl）</p>
+                </li>
+                <li>
+                    <p>在要创建项目的目录（文件夹）下，鼠标右键，选择“Git Bash Here”打开 gitbash</p>
+                </li>
+                <li>
+                    <p>如果本地没有配置好git上的用户名和邮箱，输入如下命令：</p>
+                    <p>git config --global user.name "你github的用户名"</p>
+                    <p>git config --global user.email "你github的邮箱"</p>
+                </li>
+                <li>
+                    <p>输入命令 “git clone cloneUrl”（cloneUrl 为 Clone or download 里复制的地址）</p>
+                    <p>然后就会在当前文件夹上生成在 github 上创建的项目名称</p>
+                </li>
+                <li>
+                    <p>输入命令“cd 项目名”，项目名为新增文件夹的名称，进入到项目文件夹里</p>
+                    <p>把这个项目要上传的文件复制到该项目文件夹里</p>
+                </li>
+                <li>
+                    <p>在 gitbash 输入命令 “git add .” 把该项目文件夹下新的文件或修改过的文件添加进来，如果有的文件之前已经添加了，它会自动省略。</p>
+                    <p></p>
+                </li>
+                <li>
+                    <p>输入命令 “ git commit  -m  "提交信息" ” （提交信息是你的项目说明）</p>
+                    <p>注： git commit 后面加 -m 表示可以直接输入提交说明，如果不加 -m ，直接输入git commit，就会弹出一个类似于 vim 的界面，让你输入提交说明</p>
+                </li>
+                <li>
+                    <p>输入命令 “git push -u origin master”</p>
+                    <p>此操作目的是把本地仓库push到github上面，此步骤需要你输入登录github上的帐号和密码</p>
+                </li>
+                <li>
+                    <p>然后进入github页面，刷新下页面就会显示刚上传的项目</p>
+                </li>
+            </ol>
+        </el-card>
+        <br />
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>预览Github的页面</span>
+            </div>
+            <ol>
+                <li>
+                    <p>进入github相应的项目中，点进settings</p>
+                </li>
+                <li>
+                    <p>找到 “GitHub Pages”功能模块</p>
+                </li>
+                <li>
+                    <p>点击master branch，并save</p>
+                </li>
+                <li>
+                    <p>GitHub Pages 版块会有个预览地址</p>
+                    <p>Your site is published at url地址</p>
+                </li>
+            </ol>
+        </el-card>
+        <br />
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>将已有项目提交到 github</span>
+            </div>
+            <ol>
+                <li>
+                    <p>git Bash打开项目，使用cd命令进入已有项目根目录下</p>
+                </li>
+                <li>
+                    <p>添加已有项目到github</p>
+                    <p>touch README.md //新建说明文件</p>
+                    <p>git init //在当前项目目录中生成本地git管理,并建立一个隐藏.git目录</p>
+                    <p>git add . //添加当前目录中的所有文件到索引</p>
+                    <p>git commit -m "first commit" //提交到本地源码库，并附加提交注释</p>
+                    <p>git remote add origin https://github.com/chape/test.git //添加到远程项目，别名为origin</p>
+                    <p>git push -u origin master //把本地源码库push到github 别名为origin的远程项目中，确认提交</p>
+                </li>
+                <li>
+                    <p>更新代码</p>
+                    <p>cd 项目根目录</p>
+                    <p>git add .</p>
+                    <p>git commit -m "update test" //检测文件改动并附加提交注释</p>
+                    <p>git push -u origin master //提交修改到项目主线</p>
+                </li>
+            </ol>
+        </el-card>
+        <br />
+        <el-card class="box-card">
+            <div slot="header" class="clearfix">
+              <span>在 github 上预览 vue 项目</span>
+            </div>
+            <ol>
+                <li>
+                    <p>命令行执行 npm run build 后，项目的目录下会生成一个 dist 文件夹，它里面又包含一个 static 文件夹和一个 index.html 文件，这是 webpack 最终打包好的文件</p>
+                </li>
+                <li>
+                    <p>尝试在浏览器打开 index.html，结果页面显示是空白</p>
+                </li>
+                <li>
+                    <p>打开控制台发现script 标签的引入路径不对，因为 static 文件夹和 index.html 是在同一个目录下的，这里却是从根目录引入 static 下的文件，正确的路径应该是 ./ 开头的相对路径： src='./static/...' 或者 src='static/...'</p>
+                </li>
+                <li>
+                    <p>其实这跟配置资源的路径有关，打开项目根目录 config 文件夹下的 index.js ，定位到 build 下的 assetsPublicPath （dev下也有一个assetsPublicPath，别搞错了），把 assetsPublicPath: '/' 修改为 assetsPublicPath: './'</p>
+                </li>
+                <li>
+                    <p>重新执行 npm run build ，再打开 index.html 文件，在浏览器可以看到页面效果了</p>
+                </li>
+                <li>
+                    <p>项目 push 到 github， dist 文件没有被上传到 github 的解决办法？</p>
+                </li>
+                <li>
+                    <p>找到项目根目录的 .gitignore 文件，这里设置一些文件名，对应的文件将不会被提交到 github 上面，而 dist 被设置在里面，所以就不能上传到 github 上了，我们可以把 dist 从文件里移除。</p>
+                </li>
+                <li>
+                    <p>当然还有另一种办法，就是在操作 git 命令时，把 git add. 改为 git add -f dist 意思是强制把 dist 文件提交到 github 。</p>
+                </li>
+                <li>
+                    <p>可以在 github 仓库里看到 dist 文件夹了</p>
+                </li>
+                <li>
+                    <p>在预览地址后面加上 dist/index.html</p>
+                </li>
+            </ol>
+        </el-card>
+        <br />
+    </div>
+</template>
+
+<script>
+    export default {
+        components: {},
+        data(){
+            return {
+            };
+        },
+        created(){
+            this.initData();
+        },
+        mounted(){},
+        methods: {
+            // 初始化数据
+            initData(){
+                let self = this;
+            },
+
+        },
+    };
+</script>
+
+<style lang="less" rel="stylesheet/less" type="text/less" scoped>
+.git_wrap{
+    padding: 20px;
+}
+</style>

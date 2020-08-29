@@ -1,39 +1,30 @@
 <template>
-    <div class="index_wrap">
-        <el-container>
-            <el-header class="header">Header</el-header>
-            <el-main class="main">
-                <table>
-                    <tbody>
-                        <tr class="row1">
-                            <td>
-                                <el-row>
-                                    <el-link v-for="(item, i) in data1" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
-                                </el-row>
-                            </td>
-                        </tr>
-                        <tr class="row2">
-                            <td>
-                                <el-row>
-                                    <el-link v-for="(item, i) in data2" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
-                                </el-row>
-                            </td>
-                        </tr>
-                        <tr class="row3">
-                            <td>
-                                <el-row>
-                                    <el-link v-for="(item, i) in data3" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
-                                </el-row>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <el-row></el-row>
-                <el-row></el-row>
-                <el-row></el-row>
-            </el-main>
-            <el-footer class="footer">Footer</el-footer>
-        </el-container>
+    <div class="home_wrap">
+        <table>
+            <tbody>
+                <tr class="row1">
+                    <td>
+                        <el-row>
+                            <el-link v-for="(item, i) in data1" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
+                        </el-row>
+                    </td>
+                </tr>
+                <tr class="row2">
+                    <td>
+                        <el-row>
+                            <el-link v-for="(item, i) in data2" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
+                        </el-row>
+                    </td>
+                </tr>
+                <tr class="row3">
+                    <td>
+                        <el-row>
+                            <el-link v-for="(item, i) in data3" :key="i" @click="goPage(item.routeName)" class="font">{{ item.name }}</el-link>
+                        </el-row>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </template>
 
@@ -66,6 +57,7 @@
                     {name: 'Ueditor 富文本编辑器', routeName: 'Ueditor', routePath: '/ueditor'},
                     {name: 'Git', routeName: 'git', routePath: '/it/git'},
                     {name: 'React', routeName: 'react', routePath: '/it/react'},
+                    {name: 'codeDemo', routeName: 'codeDemo', routePath: '/it/codeDemo'},
                 ];
             },
             // 获取data2 数据
@@ -105,10 +97,8 @@
 </script>
 
 <style lang="less" rel="stylesheet/less" type="text/less" scoped>
-.index_wrap{
-    .header{ background-color: #1989fa; color: #fff; font-size: 30px; text-align: center; line-height: 60px; }
-    .main{
-        background-color: #ecf8ff; min-height: calc(100vh - 120px); position: relative; text-align: center; padding: 0;
+.home_wrap{
+        height: 100%; position: relative; text-align: center;
         table{ height: auto; min-height: calc(100vh - 120px); width: 100%; }
         .row1{ background-color: #fddbe2; }
         .row2{ background-color: #f9c6d2; }
@@ -123,7 +113,5 @@
             text-decoration: none;
             color: #fddbe2;
         }
-    }
-    .footer{ background-color: #50bfff; color: #fff; font-size: 30px; text-align: center; line-height: 60px; }
 }
 </style>

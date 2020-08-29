@@ -1,3 +1,15 @@
 body{
     margin: 0; padding: 0;
 }
+.row::after, .row::before{
+    display: table; content: "";
+}
+.row::after{
+    clear: both;
+}
+.f_l{ float: left; }
+.f_r{ float: right; }
+.f_n{ float: none; }
+.t_a_l{ text-align: left; }
+.t_a_c{ text-align: center; }
+.t_a_r{ text-align: right; }

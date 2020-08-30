@@ -1,11 +1,11 @@
 <template>
     <div class="page_wrap">
         <el-container>
-            <el-header class="header">Header</el-header>
+            <!-- <el-header class="header">Header</el-header> -->
             <el-main class="main">
                 <router-view/>
             </el-main>
-            <el-footer class="footer">Footer</el-footer>
+            <!-- <el-footer class="footer">Footer</el-footer> -->
         </el-container>
     </div>
 </template>
@@ -55,7 +55,7 @@
 .page_wrap{
     .header{ background-color: #1989fa; color: #fff; font-size: 30px; text-align: center; line-height: 60px; }
     .main{
-        background-color: #ecf8ff; min-height: calc(100vh - 120px); position: relative; padding: 0;
+        background-color: #fff; min-height: calc(100vh - 120px); position: relative; padding: 0;
     }
     .footer{ background-color: #50bfff; color: #fff; font-size: 30px; text-align: center; line-height: 60px; }
 }

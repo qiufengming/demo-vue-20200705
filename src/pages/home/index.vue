@@ -65,6 +65,7 @@
                 let self = this;
                 self.data2 = [
                     {name: '工作 - 条目化', routeName: 'docStructure', routePath: '/works/docstructure'},
+                    {name: '简历', routeName: 'resume', routePath: '/works/resume'},
                 ];
             },
             // 获取data3 数据
@@ -72,6 +73,7 @@
                 let self = this;
                 self.data3 = [
                     {name: '公务员', routeName: 'gongwuyuan', routePath: '/learn/gongwuyuan'},
+                    {name: '旅游', routeName: 'travel', routePath: '/travel'},
                 ];
             },
             // 页面跳转

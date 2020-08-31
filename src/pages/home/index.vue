@@ -58,6 +58,7 @@
                     {name: 'Git', routeName: 'git', routePath: '/it/git'},
                     {name: 'React', routeName: 'react', routePath: '/it/react'},
                     {name: 'codeDemo', routeName: 'codeDemo', routePath: '/it/codeDemo'},
+                    {name: 'Vue', routeName: 'vue', routePath: '/it/vue'},
                 ];
             },
             // 获取data2 数据

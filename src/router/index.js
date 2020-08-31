@@ -15,6 +15,7 @@ import it from '@/pages/it/index'
 import git from '@/pages/it/git/index'
 import react from '@/pages/it/react/index'
 import codeDemo from '@/pages/it/codeDemo/index'
+import vue from '@/pages/it/vue/index'
 import travel from '@/pages/other/travel/index'
 import resume from '@/pages/works/resume/index'
 
@@ -87,6 +88,11 @@ export default new Router({
               path: 'codeDemo',
               name: 'codeDemo',
               component: codeDemo
+            },
+            {
+              path: 'vue',
+              name: 'vue',
+              component: vue
             },
           ],
         },

@@ -18,6 +18,7 @@ import codeDemo from '@/pages/it/codeDemo/index'
 import vue from '@/pages/it/vue/index'
 import travel from '@/pages/other/travel/index'
 import resume from '@/pages/works/resume/index'
+import interviewQuestions from '@/pages/it/interviewQuestions/index'
 
 Vue.use(Router)
 
@@ -93,6 +94,11 @@ export default new Router({
               path: 'vue',
               name: 'vue',
               component: vue
+            },
+            {
+              path: 'interviewQuestions',
+              name: 'interviewQuestions',
+              component: interviewQuestions
             },
           ],
         },

@@ -59,6 +59,7 @@
                     {name: 'React', routeName: 'react', routePath: '/it/react'},
                     {name: 'codeDemo', routeName: 'codeDemo', routePath: '/it/codeDemo'},
                     {name: 'Vue', routeName: 'vue', routePath: '/it/vue'},
+                    {name: '面试题', routeName: 'interviewQuestions', routePath: '/it/interviewQuestions'},
                 ];
             },
             // 获取data2 数据

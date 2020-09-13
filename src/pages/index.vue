@@ -1,11 +1,11 @@
 <template>
     <div class="page_wrap">
         <el-container>
-            <!-- <el-header class="header">Header</el-header> -->
+            <el-header class="header">Header</el-header>
             <el-main class="main">
                 <router-view/>
             </el-main>
-            <!-- <el-footer class="footer">Footer</el-footer> -->
+            <el-footer class="footer">Footer</el-footer>
         </el-container>
     </div>
 </template>

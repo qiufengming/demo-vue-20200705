@@ -19,6 +19,7 @@ import vue from '@/pages/it/vue/index'
 import travel from '@/pages/other/travel/index'
 import resume from '@/pages/works/resume/index'
 import interviewQuestions from '@/pages/it/interviewQuestions/index'
+import kinetic from '@/pages/it/kinetic/index'
 
 Vue.use(Router)
 
@@ -99,6 +100,11 @@ export default new Router({
               path: 'interviewQuestions',
               name: 'interviewQuestions',
               component: interviewQuestions
+            },
+            {
+              path: 'kinetic',
+              name: 'kinetic',
+              component: kinetic
             },
           ],
         },

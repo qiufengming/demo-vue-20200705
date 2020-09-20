@@ -60,6 +60,7 @@
                     {name: 'codeDemo', routeName: 'codeDemo', routePath: '/it/codeDemo'},
                     {name: 'Vue', routeName: 'vue', routePath: '/it/vue'},
                     {name: '面试题', routeName: 'interviewQuestions', routePath: '/it/interviewQuestions'},
+                    {name: 'Kinetic.js', routeName: 'kinetic', routePath: '/it/kinetic'},
                 ];
             },
             // 获取data2 数据

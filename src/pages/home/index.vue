@@ -69,6 +69,7 @@
                 self.data2 = [
                     {name: '工作 - 条目化', routeName: 'docStructure', routePath: '/works/docstructure'},
                     {name: '简历', routeName: 'resume', routePath: '/works/resume'},
+                    {name: 'KineticJS画流程图', routeName: 'kineticFlowCahrt', routePath: '/works/kineticFlowCahrt'},
                 ];
             },
             // 获取data3 数据

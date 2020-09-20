@@ -20,6 +20,7 @@ import travel from '@/pages/other/travel/index'
 import resume from '@/pages/works/resume/index'
 import interviewQuestions from '@/pages/it/interviewQuestions/index'
 import kinetic from '@/pages/it/kinetic/index'
+import kineticFlowCahrt from '@/pages/works/kineticjs/index'
 
 Vue.use(Router)
 
@@ -117,6 +118,11 @@ export default new Router({
           path: '/works/resume',
           name: 'resume',
           component: resume
+        },
+        {
+          path: '/works/kineticFlowCahrt',
+          name: 'kineticFlowCahrt',
+          component: kineticFlowCahrt
         },
       ], 
     },
